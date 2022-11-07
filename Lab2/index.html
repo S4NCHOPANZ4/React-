@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <!-- MATERIALIZE CSS -->
+    <link
+      rel="stylesheet"
+      href="https://unpkg.com/materialize-css@1.0.0/dist/css/materialize.min.css"
+    />
+    <!-- MATERIAL ICONS -->
+    <link
+      rel="stylesheet"
+      href="https://unpkg.com/font-awesome@4.7.0/css/font-awesome.min.css"
+    />
+    <!-- CUSTOM CSS -->
+    <link rel="stylesheet" href="styles.css" />
+
+    <!-- REACT API -->
+    <script
+      src="https://unpkg.com/react@17.0.0/umd/react.production.min.js"
+      crossorigin
+    ></script>
+    <!-- REACT DOM -->
+    <script
+      src="https://unpkg.com/react-dom@17.0.0/umd/react-dom.production.min.js"
+      crossorigin
+    ></script>
+    <!-- BABEL COMPILER -->
+    <script
+      src="https://unpkg.com/babel-standalone@6.26.0/babel.min.js"
+      crossorigin
+    ></script>
+        <script type="text/babel" src="./App.js"></script>
+  </head>
+  <body>
+
+
+    <div id="root"></div>
+    <script type="text/babel">
+      const socialIcons = [
+
+    {
+        icon: "instagram",
+        title: "Instagram"
+    },
+    {
+        icon: "facebook-f",
+        title: "Facbook"
+    },
+    {
+        icon: "twitter",
+        title: "Twitter"
+    },
+    {
+        icon: "linkedin",
+        title: "LinkedIn"
+    },
+    {
+        icon: "youtube",
+        title: "YouTube"
+    },
+    {
+        icon: "github",
+        title: "Github"
+    }
+]
+
+      const root = (
+        <div class="wrapper">
+          
+          <Comp icon={socialIcons[0].icon} name={socialIcons[0].title}/>
+          <Comp icon={socialIcons[1].icon} name={socialIcons[1].title}/>
+          <Comp icon={socialIcons[2].icon} name={socialIcons[2].title}/>
+          <Comp icon={socialIcons[3].icon} name={socialIcons[3].title}/>
+          <Comp icon={socialIcons[4].icon} name={socialIcons[4].title}/>
+          <Comp icon={socialIcons[5].icon} name={socialIcons[5].title}/>
+
+        </div>
+      )
+     
+      ReactDOM.render(root,document.getElementById("root"))
+    </script>
+  </body>
+</html> 
