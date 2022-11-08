@@ -68,16 +68,19 @@
     }
 ]
 
+
+    const a  = socialIcons.map((socialIcon)=>{
+      <Comp icon={socialIcons[0].icon} name={socialIcons[0].title}/>
+    })
+
       const root = (
         <div class="wrapper">
           
-          <Comp icon={socialIcons[0].icon} name={socialIcons[0].title}/>
-          <Comp icon={socialIcons[1].icon} name={socialIcons[1].title}/>
-          <Comp icon={socialIcons[2].icon} name={socialIcons[2].title}/>
-          <Comp icon={socialIcons[3].icon} name={socialIcons[3].title}/>
-          <Comp icon={socialIcons[4].icon} name={socialIcons[4].title}/>
-          <Comp icon={socialIcons[5].icon} name={socialIcons[5].title}/>
-
+          {socialIcons.map((socialIcon)=>{
+            return(
+              <Comp icon={socialIcon.icon} name={socialIcon.title}/>
+            )
+          })}
         </div>
       )
      
